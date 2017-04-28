@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .wrap{
+        width: 900px;
+        height: 300px;
+        border: 1px solid red;
+        overflow: hidden;
+        position: relative;
+      }
+      .content{
+        /*overflow: hidden;*/
+      }
+      .content ul{
+        /*clear: both;*/
+        /*overflow: hidden;*/
+        height: 300px;
+        position: absolute;
+      }
+      .content ul li{
+        float: left;
+
+      }
+        .content ul li img{
+          height: 352px;
+          width: 233px;
+        }
+      .zuo{
+        width: 40px;
+        height: 50px;
+        background: red;
+        cursor: pointer;
+        position: absolute;
+        top: 0px;
+      }
+      .you{
+        width: 40px;
+        height:50px;
+        background-color: blue;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="content">
+          <ul >
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/p2.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/p3.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+            <li><img src="imgs/lunbos.png" alt=""></li>
+          </ul>
+      </div>
+
+    </div>
+
+          <div class="zuo">
+            <<
+          </div>
+          <div class="you">
+            >>
+          </div>
+  </body>
+  <script src="js/jquery-1.8.3.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+      var lis = $('.content ul li').length*$('.content ul li').width();
+      $('.content ul').width(lis);
+      var  a = -$('.content ul li').width() + "px"
+      // console.log($('.content ul').offsetWidth(11));
+      $('.you').click(function(){
+        var  a = $('.content ul li').width() + "px"
+        $('.content ul li').css({
+          left:a
+        })
+        console.log("111");
+      })
+      $('.zuo').click(function(){
+        var  a = -$('.content ul li').width() + "px"
+        $('.content ul').animate({
+          left:-a
+        })
+        console.log("222");
+      })
+  </script>
+</html>

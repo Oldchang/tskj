@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+a{ text-decoration:none; color:#333;  }
+.picScroll-left{
+	/*min-width: 1300px;*/
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.bd>div{
+	margin: 0 auto;
+}
+.picScroll-left .hd .prev{
+	position: absolute;
+	display:block;
+	float:left;
+	left:5px;
+	top:120px;
+	overflow:hidden;
+	cursor:pointer;
+	width: 60px;
+	height: 96px;
+	z-index: 100;
+}
+.picScroll-left .hd .next{
+	 position: absolute;
+	 display:block;
+	 float:right;
+	 right:5px;
+	 top:120px;
+	 overflow:hidden;
+	 cursor:pointer;
+	 width: 60px;
+ 	 height: 96px;
+	 z-index: 100;
+ }
+.picScroll-left .bd{ padding-top:35px;}
+.picScroll-left .bd ul{ overflow:hidden;}
+.picScroll-left .bd ul li{
+	margin:0 5px;
+	width:185px;
+	float:left;
+	display:inline;
+  overflow:hidden;
+	text-align:center;
+}
+.picScroll-left .bd ul li .pic{text-align:center;height: 222px}
+.picScroll-left .bd ul li .pic img{ display:block; height: 100%;width: 100%}
+.picScroll-left .bd ul li .title{ line-height:35px;}
+.picScroll-left .bd ul li .title a{
+	color: rgb(215, 0, 81);
+	font-size: 26px;
+}
